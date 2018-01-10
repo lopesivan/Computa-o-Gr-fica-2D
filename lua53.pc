@@ -8,8 +8,7 @@ V= 5.1
 R= 5.1.4
 
 # grep '^INSTALL_.*=' ../Makefile | sed 's/INSTALL_TOP/prefix/'
-#prefix= /usr/local
-prefix= /home/ivan/.luaenv/versions/5.3.3
+prefix= /usr/local
 INSTALL_BIN= ${prefix}/bin
 INSTALL_INC= ${prefix}/include
 INSTALL_LIB= ${prefix}/lib
