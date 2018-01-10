@@ -1,0 +1,13 @@
+2D Computer Graphics
+2017.0
+
+Warmup assignment: running the sample programs
+-----------------------------------
+
+Download the binaries for Windows or compile from source on
+Linux and Mac OS. Make sure this is your working directory
+when you run the Lua executable, so it will find all the
+libraries it needs.
+
+Then, try to run the sample programs to produce the images
+in the "results/" directory.

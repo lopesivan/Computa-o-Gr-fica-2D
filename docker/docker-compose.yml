@@ -1,0 +1,11 @@
+version: "2"
+services:
+
+  vg:
+    image: diegonehab/vg:latest
+    container_name: vg2018-1
+    working_dir: /home/vg/work
+    command: bash
+    volumes:
+       - ${PWD}/workspace:/home/vg/work
+
