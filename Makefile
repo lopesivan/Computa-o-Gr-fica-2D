@@ -42,7 +42,8 @@ CP=$(CP_$(UNAME))
 
 # Load includes and libs from pkg-config
 PKG    := PKG_CONFIG_PATH=./  pkg-config
-LUAINC := $(shell $(PKG) --cflags lua$V)
+
+LUAINC := $(shell $(PKG) --define-variable=prefix=`luaenv root`/versions/`luaenv whence lua` --cflags lua$V)
 FTINC  := $(shell $(PKG) --cflags freetype2)
 FTLIB  := $(shell $(PKG) --libs freetype2)
 PNGINC := $(shell $(PKG) --cflags libpng16)
@@ -120,8 +121,8 @@ description/lua.o: INC      += $(LUAINC)
 
 # Redefine pattern rule for OBJS from CPP
 %.o: %.cpp %.d
-	@echo compiling $<
-	@$(CXX) $(CXXFLAGS) $(INC) -o $@ -c $<
+	#compiling $<
+	$(CXX) $(CXXFLAGS) $(INC) -o $@ -c $<
 
 # Don't worry if dependency files are not found
 $(DEPS): ;
